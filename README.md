@@ -1,3 +1,3 @@
 # Kelompok 9 PTI
 tugas PTI
-Hapis AJG <3 elly
+Heksa Kecil 2cm
