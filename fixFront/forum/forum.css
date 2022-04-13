@@ -1,0 +1,193 @@
+
+.container {
+    border: 2px solid #dedede; 
+    background-color: #f1f1f1; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin: 10px 0;
+}
+.gelap {
+    border-color: #ccc; 
+    background-color: #ddd;
+}
+.container::after {
+    content: ""; 
+    clear: both; 
+    display: table;}
+.container img {
+    float: left; 
+    max-width: 60px; 
+    width: 100%; 
+    margin-right: 20px; 
+    border-radius: 50%;
+}
+.container img.m_right {
+    float: right; 
+    margin-left: 20px; 
+    margin-right:0;
+}
+.right {
+    float: right; 
+    color: #575252;
+}
+.left {
+    float: left; 
+    color: #3b3939;
+}
+
+h1 {
+  color: #fff;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: #fff;
+  font-family: courier;
+  font-size: 160%;
+}
+
+body {  
+  background-image: url('rectangle1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+
+}
+
+form {
+    width:500px;
+    margin:50px auto;
+}
+
+
+a{text-decoration: none; font-size: 20px;font-family: sans-serif;padding: 14px 10px}
+ul{padding: 14px}
+li{list-style: none; display: inline;}
+li a{; color:#d4d4d4;}
+li a:hover{background: #4da4ff; color:#fff;}
+
+
+.kanan{
+    width: 50%;
+    height: 150%;
+}
+.kiri{
+    font-size: 72pt;
+    margin-left: 20%;
+
+}
+.wrapper{
+    width: 10%;
+    display: flex;
+    
+}
+.img1{
+    margin-top: 15%;
+    width: 80%;
+    height: auto;
+}
+.imglogo{
+    margin-left: 10%;
+    width:5% ;
+    height:10%;
+  
+}
+.konten{
+  margin-top: -300px;
+}
+
+
+
+
+
+.TombolKembali{
+    padding-top: 2%;
+    margin-left: -85%;
+    height: 8%;
+    width: 4%;
+}
+.Layoutdalam{
+    display: flex;
+}
+.gambarberita{
+    height:40%;
+    width:40%;
+    border-radius: 20px;
+    margin-left: -40%;
+}
+.konten{
+    padding-left: 50%;
+    padding-top: 5%;
+}
+.TombolLanjut{
+    margin-left: 60%;
+}
+
+.navberita{
+    margin-top: 5%;
+
+}
+
+.wrap{
+    background: blue;
+    width: 900px;
+    margin: 10px auto;
+}
+ 
+/*bagian header*/
+.wrap .header{
+    background: green;
+    /*height: 50px;*/
+    padding: 2px 10px;
+}
+ 
+/*akhir header*/
+ 
+/*bagian menu*/
+.wrap .menu{
+    background: yellow;
+}
+ 
+.wrap .menu ul{
+    padding: 0;
+    margin: 0;
+    background: yellow;
+    overflow: hidden;
+}
+ 
+.wrap .menu ul li{
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+}
+/*akhir menu*/
+ 
+.clear{
+    clear: both;
+}
+ 
+.badan{
+    height: 450px;
+}
+/*bagian sidebar*/
+.wrap .badan .sidebar{
+    background: orange;
+    float: left;    
+    width: 25%;
+    height: 100%;
+}
+ 
+/*akhir sidebar*/
+ 
+.wrap .badan .content{
+    background: red;
+    float: left;
+    height: 100%;
+    width: 75%; 
+}
+ 
+.wrap .footer{
+    width: 100%;
+    padding: 10px;
+}
