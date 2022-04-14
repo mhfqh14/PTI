@@ -1,0 +1,132 @@
+h1 {
+  color: #fff;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: #fff;
+  font-family: courier;
+  font-size: 160%;
+}
+
+body {  
+  background-image: url('rectangle1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+
+}
+
+form {
+    width:500px;
+    margin:50px auto;
+}
+.search {
+    padding:8px 15px;
+    background:#FFFF
+    border:0px solid #FFFF;
+
+}
+
+
+.layout {
+  margin: 120px 120px 0px 120px;
+
+
+}
+
+.navi{ 
+    margin-top: 20px; 
+    width: 100%;
+}
+
+
+.kanan{
+    width: 50%;
+    height: 150%;
+}
+.kiri{
+    font-size: 72pt;
+    margin-left: 20%;
+
+}
+.wrapper{
+    width: 10%;
+    display: flex;
+    
+}
+.img1{
+    margin-top: 15%;
+    width: 80%;
+    height: auto;
+}
+.imglogo{
+    margin-left: 10%;
+    width:7% ;
+    height:12%;
+  
+}
+.konten{
+  margin-top: -300px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #331C8D;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #331C8D;
+
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #331C8D;
+    
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 14px 10px;
+}
+ul {
+  padding: 14px;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+li a {
+  color: #d4d4d4;
+  margin-left: 20px;
+}

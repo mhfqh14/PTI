@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
+from django.contrib.auth import views as auth_view
 
 from home import views as homeViews
 from berita import views as beritaViews
@@ -24,8 +25,12 @@ from umkm import views as umkmViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', homeViews.index),
+    url(r'^$', homeViews.index, name='home'),
     url(r'berita/$', beritaViews.index),
     url(r'forum/$', forumViews.index),
-    url(r'umkm/$', umkmViews.index)
+    url(r'umkm/$', umkmViews.index),
+    # url(r'login/$',homeViews.login),
+    url(r'login/$',  auth_view.LoginView.as_view(template_name='home/login.html'), name="login"),
+    url(r'logout/$',  auth_view.LogoutView.as_view(template_name='home/logout.html'), name="logout"),
+    url(r'register/$',homeViews.register, name='register')
 ]

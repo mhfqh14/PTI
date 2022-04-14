@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>UMKM</title>
-</head>
+  <title>UMKM | SEKAM</title>
+  <link rel="stylesheet" type="text/css" href="../static/img/umkm/umkm.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 
-<nav class="navi">
+</head>
+<img class="imglogo" src="../static/img/umkm/logosekam.png">
+
+<div>
+  <nav style="margin-left: 31%; margin-top: -6%;">
     <ul>
+
       <li>
-        <a href="../"><b>Beranda</b></a>
+        <a href="../" style="color:white ; font-size: 18pt;  font-family: Poppins;">Beranda</a>
       </li>
-      <li><a href="../berita">Berita</a></li>
-      <li><a href="../forum">Forum</a></li>
-      <li><a href="../umkm">UMKM</a></li>
+      <li><a href="../berita" style="color:white; font-size: 18pt; font-family: Poppins;">Berita</a></li>
+      <li><a href="../umkm" style="color:white ; font-size: 18pt; font-weight: bolder; font-family: Poppins;">UMKM</a></li>
+      
+
+      {% if user.is_authenticated %}
+        <li><a href="../forum" style="color:white ; font-size: 18pt; font-family: Poppins;">Forum</a></li>
+
+        <li><a href="../logout" style="color:red ; font-size: 18pt; font-family: Poppins;">Keluar</a></li>
+      {% else %}
+      <li>
+        <a href="../login"><img src="../static/img/home/profile.png" width="35px" height="35px" style="margin-left:30%" /></a>
+      </li>
+      
+      {% endif %}
     </ul>
+
   </nav>
 
+
+</div>
+
+
+
+
 <body>
-	<h1>Halaman UMKM</h1>
+<center style="margin-top: 5%; width:70%; margin-left: 15%;">
+
+
+
+  <table class="styled-table">
+    <thead>
+        <tr style="font-size:12pt">
+            <th>Nama Pemilik</th>
+            <th>Nama UMKM</th>
+            <th>Alamat</th>
+            <th>Kecamatan</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {%  for data_umkm in data  %}
+
+        <tr>
+            <td>{{data_umkm.nama_pemilik}}</td>
+            <td>{{data_umkm.nama_umkm}}</td>
+            <td>{{data_umkm.alamat}}</td>
+            <td>{{data_umkm.kecamatan}}</td>
+        </tr>
+
+        {%  endfor  %}
+    </tbody>
+  </table>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/af-2.3.6/b-1.7.0/b-colvis-1.7.0/b-html5-1.7.0/b-print-1.7.0/cr-1.5.3/fc-3.3.2/kt-2.6.1/r-2.2.7/rg-1.1.2/rr-1.2.7/sl-1.3.3/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.24/af-2.3.6/b-1.7.0/b-colvis-1.7.0/b-html5-1.7.0/b-print-1.7.0/cr-1.5.3/fc-3.3.2/kt-2.6.1/r-2.2.7/rg-1.1.2/rr-1.2.7/sl-1.3.3/datatables.min.js"></script>
+
+  <script>
+      $(document).ready( function () {
+      $('.styled-table').DataTable({
+
+      dom: 'B<"clear">lfrtip',
+      buttons: {
+          name: 'primary',
+          buttons: [ 'copy', 'csv', 'excel', 'pdf' ]
+
+          }}
+      );
+  } );
+  </script>
+
+
+</center>
 </body>
+
 </html>

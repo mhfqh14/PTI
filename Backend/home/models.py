@@ -13,10 +13,11 @@ class user(models.Model):
 	def __str__(self):
 		return "{}.{}".format(self.username)
 
-class admin(models.Model):
-	username = models.CharField(max_length=100)
-	password = models.CharField(max_length=255)
-	nama = models.CharField(max_length=255, primary_key=True)
+# class editor(models.Model):
+# 	username = models.CharField(max_length=100)
+# 	password = models.CharField(max_length=255)
+# 	nama = models.CharField(max_length=255, primary_key=True)
+# 	email = models.EmailField()
 
-	def __str__(self):
-		return "{}.{}".format(self.username)
+# 	def __str__(self):
+# 		return "{}.{}".format(self.username)
