@@ -22,35 +22,7 @@ form {
     width:500px;
     margin:50px auto;
 }
-.search {
-    padding:8px 15px;
-    background:#FFFF
-    border:0px solid #FFFF;
 
-}
-.button {
-    position:relative;
-    padding:10px 15px;
-    left:1px;
-    border:0px solid #FFFF;
-    background-color:#dbdbdb;
-    color:#00000;
-}
-.button:hover  {
-    background-color:#dbdbdb;
-    color:#FFFF;
-}
-
-.layout {
-  margin: 120px 120px 0px 120px;
-
-
-}
-
-.navi{ 
-    margin-top: 20px; 
-    width: 100%;
-}
 
 a{text-decoration: none; font-size: 20px;font-family: sans-serif;padding: 14px 10px}
 ul{padding: 14px}
@@ -88,7 +60,34 @@ li a:hover{background: #4da4ff; color:#fff;}
   margin-top: -300px;
 }
 
-.table{
-    border-radius: 20px;
 
+
+.box1{
+argin: 7% 0% 0%0%;
+width:90%;
+height:450px;
+background:#dfdfdf;
+border-radius: 50px;
+box-shadow: 10px 10px 5px lightblue;
+}
+.TombolKembali{
+    margin-left: -85%;
+    height: 10%;
+    width: 10%;
+}
+.Layoutdalam{
+    display: flex;
+}
+.gambarberita{
+    height:40%;
+    width:40%;
+    border-radius: 20px;
+    margin-left: -40%;
+}
+.konten{
+    padding-left: 50%;
+    padding-top: 5%;
+}
+.TombolLanjut{
+    margin-left: 60%;
 }
