@@ -63,17 +63,17 @@ li a:hover{background: #4da4ff; color:#fff;}
 
 
 .box1{
-argin: 7% 0% 0%0%;
+margin: 7% 0% 0%0%;
 width:90%;
-height:450px;
+height:1000px;
 background:#dfdfdf;
 border-radius: 50px;
 box-shadow: 10px 10px 5px lightblue;
 }
 .TombolKembali{
     margin-left: -85%;
-    height: 10%;
-    width: 10%;
+    height: 5%;
+    width: 5%;
 }
 .Layoutdalam{
     display: flex;
@@ -89,5 +89,12 @@ box-shadow: 10px 10px 5px lightblue;
     padding-top: 5%;
 }
 .TombolLanjut{
-    margin-left: 60%;
+    position: absolute;
+    left: 45%;
+    bottom: -450px;
+  
+}
+.isikonten{
+    margin: 4px 3px 3px 3px;
+    text-align: justify;
 }

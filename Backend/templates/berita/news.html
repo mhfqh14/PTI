@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>Menghubungkan HTML dengan CSS | www.malasngoding.com</title>
-  <link rel="stylesheet" type="text/css" href="editnews.css">
+  <link rel="stylesheet" type="text/css" href="/static/img/berita/editnews.css">
 </head>
-<img class="imglogo" src="logosekam.png">
+<img class="imglogo" src="/static/img/berita/logosekam.png">
 
 <div>
   <nav>
@@ -13,7 +13,7 @@
     <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Berita</b></a></li>
     <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Forum</b></a></li>
     <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>UMKM</b></a></li>
-    <a href="#"><img src="profile.png" width="30px" height="30px" style=" " /></a>
+    <a href="#"><img src="/static/img/berita/profile.png" width="30px" height="30px" style=" " /></a>
     </ul>
 
   </nav>
@@ -26,17 +26,21 @@
 
 <body>
 <center>
+
+
 <div class="box1">
-  <img class="TombolKembali" src="TombolKembali.png">
+  <a href="http://127.0.0.1:8000/berita/"><img class="TombolKembali" src="/static/img/berita/tombolkembali.png"></a>
   <div class="layoutdalam">
-    <img class="gambarberita" src="GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-  <a href="#"><img class="TombolLanjut" src="TombolLanjut.png"></a>
-  </div>
+    <img class="gambarberita" src="/{{semua_akun.gambar}}">
+    <h1 class="konten" style="color: black;">{{semua_akun.judul}}</h1>
+      </div>
+  <p class="isikonten" style="color: black;">{{semua_akun.isi_berita}}</p>
 
 
 
 </div>
+
+
 
 
     

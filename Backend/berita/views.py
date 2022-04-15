@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import berita
 from .forms import BeritaForm
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -58,3 +59,18 @@ def update(request, update_id):
 	}
 
 	return render(request, 'berita/create.html', context)
+
+def singlePost(request, slugInput):
+	posts = berita.objects.get(slug=slugInput)
+
+	context = {
+		'semua_akun': posts
+	}
+
+	judul="<h1>{}</h1>".format(posts.judul)
+	tanggal="<h1>{}</h1>".format(posts.tanggal)
+	penulis="<h1>{}</h1>".format(posts.penulis)
+	gambar="<h1>{}</h1>".format(posts.gambar)
+	isi_berita="<h1>{}</h1>".format(posts.isi_berita)
+	
+	return render(request, 'berita/news.html', context)

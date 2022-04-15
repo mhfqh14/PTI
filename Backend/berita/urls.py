@@ -7,4 +7,5 @@ urlpatterns = [
 	url(r'^delete/(?P<delete_id>[0-9]+)$', views.delete, name='delete'),
 	url(r'^create/$', views.create, name='create'),
 	url(r'^$', views.index, name='list'),
+	url(r'^posts/(?P<slugInput>[\w-]+)/$', views.singlePost),
 ]

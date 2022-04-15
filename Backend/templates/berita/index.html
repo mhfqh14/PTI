@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Menghubungkan HTML dengan CSS | www.malasngoding.com</title>
+  <title>Berita | SEKAM</title>
   <link rel="stylesheet" type="text/css" href="../static/img/berita/newsedit2.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <img class="imglogo" src="../static/img/berita/logosekam.png">
 
 <div>
   <nav>
     <ul style="margin-left: 40%; margin-top: -2%;">
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Beranda</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Berita</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Forum</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>UMKM</b></a></li>
-    <a href="#"><img src="../static/img/berita/profile.png" width="30px" height="30px" style=" " /></a>
+    <li>
+        <a href="../" style="color:white ; font-size: 18pt;  font-family: Poppins;">Beranda</a>
+      </li>
+      <li><a href="../berita" style="color:white; font-size: 18pt;font-weight: bolder; font-family: Poppins;">Berita</a></li>
+      <li><a href="../umkm" style="color:white ; font-size: 18pt; font-family: Poppins;">UMKM</a></li>
+      
+
+      {% if user.is_authenticated %}
+        <li><a href="../forum" style="color:white ; font-size: 18pt; font-family: Poppins;">Forum</a></li>
+
+        <li><a href="../logout" style="color:red ; font-size: 18pt; font-weight: bold; font-family: Poppins;">Keluar</a></li>
+      {% else %}
+      <li><a href="../login" style="color:white ; font-size: 18pt; font-family: Poppins;">Forum</a></li>
+      <li>
+        <a href="../login"><img src="../static/img/home/profile.png" width="35px" height="35px" style="margin-left:30%" /></a>
+      </li>
+      
+      {% endif %}
     </ul>
 
   </nav>
@@ -28,28 +42,25 @@
 <div class="navberita">
 <a href="newskonten.html"><b>Berita|</b></a>
 <a href="eventnews.html"><b>|Event</b></a>
-
 {% if user.is_superuser %}
-<a href="create"><b>|Tambah Berita</b></a>
-{% endif %}
+  <a href="http://127.0.0.1:8000/admin/berita/berita/add/"><b>|Tambah Berita</b></a>
+{%endif%}
 </div>
 <center>
 
 
-
-  {% for data in semua_akun %}
-
+{%  for data in semua_akun %}
 <div class="box1">
-  <img class="TombolKembali" src="../static/img/berita/STAR.png">
+  <img class="TombolKembali" src="../static/img/berita/STAR.png" style="width:3%">
   <div class="layoutdalam">
     <img class="gambarberita" src="../{{data.gambar}}">
-    <p class="konten" style="color: black;">{{data.judul}}</p>
-  <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
+    <p class="konten" style="color: black; text-align:left; margin-left:2%">{{data.judul}}</p>
+  <a href="posts/{{data.slug}}"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
   </div>
 
 </div>
+{%endfor%}
 
-{% endfor %}
 
 
     
