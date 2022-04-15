@@ -13,4 +13,4 @@ class data_umkm (models.Model):
 	foto_produk = models.ImageField()
 
 	def __str__(self):
-		return "{}.{}".format(self.nama_umkm)
+		return "{}".format(self.nama_umkm)

@@ -8,5 +8,8 @@ class berita(models.Model):
 	tanggal = models.DateField()
 	penulis= models.CharField(max_length=100)
 	editor= models.CharField(max_length=100)
-	gambar= models.ImageField()
+	gambar= models.ImageField(upload_to='static/berita/%Y/%m/%d')
 	isi_berita= models.TextField()
+
+	def __str__(self):
+		return "{}".format(self.judul)

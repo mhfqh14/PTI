@@ -28,54 +28,28 @@
 <div class="navberita">
 <a href="newskonten.html"><b>Berita|</b></a>
 <a href="eventnews.html"><b>|Event</b></a>
+
+{% if user.is_superuser %}
+<a href="create"><b>|Tambah Berita</b></a>
+{% endif %}
 </div>
 <center>
+
+
+
+  {% for data in semua_akun %}
+
 <div class="box1">
   <img class="TombolKembali" src="../static/img/berita/STAR.png">
   <div class="layoutdalam">
-    <img class="gambarberita" src="../static/img/berita/GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
+    <img class="gambarberita" src="../{{data.gambar}}">
+    <p class="konten" style="color: black;">{{data.judul}}</p>
   <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
   </div>
-
-
 
 </div>
-<div class="box2">
-  <img class="TombolKembali" src="../static/img/berita/STAR.png">
-  <div class="layoutdalam">
-    <img class="gambarberita" src="../static/img/berita/GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-  <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
-  </div>
 
-<div class="box3">
-  <img class="TombolKembali" src="../static/img/berita/STAR.png">
-  <div class="layoutdalam">
-    <img class="gambarberita" src="../static/img/berita/GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-  <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
-  </div>
-
-<div class="box4">
-  <img class="TombolKembali" src="../static/img/berita/STAR.png">
-  <div class="layoutdalam">
-    <img class="gambarberita" src="../static/img/berita/GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-  <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
-  </div>
-
-<div class="box5">
-  <img class="TombolKembali" src="../static/img/berita/STAR.png">
-  <div class="layoutdalam">
-    <img class="gambarberita" src="../static/img/berita/GambarBerita.png">
-    <p class="konten" style="color: black;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-  <a href="#"><img class="TombolLanjut" src="../static/img/berita/RDMORE.png"></a>
-  </div>
-
-
-
-</div>
+{% endfor %}
 
 
     
