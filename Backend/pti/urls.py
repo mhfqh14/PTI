@@ -15,18 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib.auth import views as auth_view
 
 from home import views as homeViews
-from berita import views as beritaViews
 from forum import views as forumViews
 from umkm import views as umkmViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$', homeViews.index, name='home'),
-    url(r'berita/$', beritaViews.index),
+    path('berita/', include('berita.urls')),
     url(r'forum/$', forumViews.index),
     url(r'umkm/$', umkmViews.index),
     # url(r'login/$',homeViews.login),

@@ -1,6 +1,60 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import berita
+from .forms import BeritaForm
 
 # Create your views here.
 
 def index (request):
-	return render(request, 'berita/index.html')
+
+	semua_akun = berita.objects.all()
+	context = {
+		'semua_akun': semua_akun,
+	}
+
+
+	return render(request, 'berita/index.html', context)
+
+def create(request):
+	akun_form = BeritaForm(request.POST or None)
+
+	if request.method == 'POST':
+		if akun_form.is_valid():
+			akun_form.save()
+
+		return redirect('../')
+
+	context = {
+		'akun_form' : akun_form,
+	}
+
+	return render(request, 'berita/create.html', context)
+
+def delete(request, delete_id):
+	berita.objects.filter(id=delete_id).delete()
+	return redirect('../')
+
+def update(request, update_id):
+	akun_update = berita.objects.get(id=update_id)
+
+	data = {
+		'judul': akun_update.judul,
+		'tanggal': akun_update.tanggal,
+		'penulis': akun_update.penulis,
+		'editor': akun_update.editor,
+		'gambar': akun_update.gambar,
+		'isi_berita': akun_update.isi_berita,		
+	}
+	akun_form = BeritaForm(request.POST or None, initial=data, instance=akun_update)
+	
+	if request.method == 'POST':
+		if akun_form.is_valid():
+			akun_form.save()
+
+		return redirect('../')
+
+	context = {
+		'title' : 'Update Berita',
+		'akun_form' : akun_form,
+	}
+
+	return render(request, 'berita/create.html', context)

@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'pti.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pti',
+        'NAME': 'pti2',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',

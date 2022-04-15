@@ -10,9 +10,6 @@ class user(models.Model):
 	alamat = models.TextField()
 	nomor_handphone = models.CharField(max_length=16)
 
-	def __str__(self):
-		return "{}.{}".format(self.username)
-
 # class editor(models.Model):
 # 	username = models.CharField(max_length=100)
 # 	password = models.CharField(max_length=255)
