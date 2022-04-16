@@ -8,4 +8,5 @@ urlpatterns = [
 	url(r'^create/$', views.create, name='create'),
 	url(r'^$', views.index, name='list'),
 	url(r'^posts/(?P<slugInput>[\w-]+)/$', views.singlePost),
+	url(r'^event/', views.event),
 ]

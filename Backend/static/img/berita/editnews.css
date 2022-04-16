@@ -9,7 +9,9 @@ p {
   font-size: 160%;
 }
 
-body {  
+body { 
+  
+  flex: 1;
   background-image: url('rectangle1.png');
   background-size: cover;
   background-repeat: no-repeat;

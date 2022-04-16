@@ -74,3 +74,7 @@ def singlePost(request, slugInput):
 	isi_berita="<h1>{}</h1>".format(posts.isi_berita)
 	
 	return render(request, 'berita/news.html', context)
+
+
+def event (request):
+	return render(request, 'berita/eventnews.html')

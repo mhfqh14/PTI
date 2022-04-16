@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Menghubungkan HTML dengan CSS | www.malasngoding.com</title>
+  <title>{{semua_akun.judul}} | SEKAM</title>
   <link rel="stylesheet" type="text/css" href="/static/img/berita/editnews.css">
 </head>
 <img class="imglogo" src="/static/img/berita/logosekam.png">
@@ -9,11 +9,24 @@
 <div>
   <nav>
     <ul style="margin-left: 40%; margin-top: -2%;">
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Beranda</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Berita</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>Forum</b></a></li>
-    <li style="padding-right: 5%;"><a href="#" style="font-size: 20pt"><b>UMKM</b></a></li>
-    <a href="#"><img src="/static/img/berita/profile.png" width="30px" height="30px" style=" " /></a>
+    <li>
+        <a href="/" style="color:white ; font-size: 18pt;  font-family: Poppins;">Beranda</a>
+      </li>
+      <li><a href="/berita" style="color:white; font-size: 18pt;font-weight: bolder; font-family: Poppins;">Berita</a></li>
+      <li><a href="/umkm" style="color:white ; font-size: 18pt; font-family: Poppins;">UMKM</a></li>
+      
+
+      {% if user.is_authenticated %}
+        <li><a href="/forum" style="color:white ; font-size: 18pt; font-family: Poppins;">Forum</a></li>
+
+        <li><a href="/logout" style="color:red ; font-size: 18pt; font-weight: bold; font-family: Poppins;">Keluar</a></li>
+      {% else %}
+      <li><a href="/login" style="color:white ; font-size: 18pt; font-family: Poppins;">Forum</a></li>
+      <li>
+        <a href="/login"><img src="/static/img/home/profile.png" width="35px" height="35px" style="margin-left:30%" /></a>
+      </li>
+      
+      {% endif %}
     </ul>
 
   </nav>
@@ -29,7 +42,7 @@
 
 
 <div class="box1">
-  <a href="http://127.0.0.1:8000/berita/"><img class="TombolKembali" src="/static/img/berita/tombolkembali.png"></a>
+  <a href="/berita/"><img class="TombolKembali" src="/static/img/berita/tombolkembali.png"></a>
   <div class="layoutdalam">
     <img class="gambarberita" src="/{{semua_akun.gambar}}">
     <h1 class="konten" style="color: black;">{{semua_akun.judul}}</h1>
