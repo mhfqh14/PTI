@@ -32,3 +32,4 @@ wheel             0.36.2
 whitenoise        5.2.0
 xhtml2pdf         0.2.5
 xlwt              1.3.0
+crispy-forms
