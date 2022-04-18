@@ -4,7 +4,7 @@ h1 {
   font-size: 300%;
 }
 p {
-  color: #fff;
+  color: #00000;
   font-family: courier;
   font-size: 160%;
 }
@@ -83,7 +83,7 @@ box-shadow: 10px 10px 5px lightblue;
 .box3{
 margin: 5% 0% 0% 0%;
 width:15%;
-height:650px;
+height:500px;
 background:#dfdfdf;
 border-radius: 50px;
 box-shadow: 10px 10px 5px lightblue;
@@ -145,20 +145,23 @@ position: absolute;
 position: absolute;
 margin: 72% 0% 0% 0%;
 width:60%;
-height: 300px;
+height: 400px;
 background:#dfdfdf;
 border-radius: 50px;
 box-shadow: 10px 10px 5px lightblue;
 }
 .box6{
 position: absolute;
-margin: 93% 0% 0% 0%;
+margin: 100% 0% 0% 0%;
 width:60%;
-height: 300px;
+height: 400px;
 background:#dfdfdf;
 border-radius: 50px;
 box-shadow: 10px 10px 5px lightblue;
 }
 .Layoutdalam2{
     margin-left: 30%;
+}
+.Ellipse{
+    margin: 5% 0% 0% 0%;
 }
